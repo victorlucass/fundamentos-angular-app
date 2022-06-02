@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <h2>Input Binding</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <span> Boss Name is {{ nameUser }} </span> <br />
+    <span> Boss LastName is {{ lastNameUser }} </span>
+  </mat-card-content>
+  <mat-card-content>
+    <div *ngFor="let item of listClient">
+      <app-client-list [client]="item" (eventUser)="addConsoleLog(item)"></app-client-list>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,13 @@
+<mat-card>
+  <section>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="name"> 
+    </mat-form-field>
+    <button mat-button (click)="update()">Update</button>
+  </section>
+
+  <section>
+    <app-name-change [change]="nameNew"></app-name-change>
+  </section>
+  
+</mat-card>
